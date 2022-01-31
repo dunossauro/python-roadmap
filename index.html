@@ -1,385 +1,1410 @@
+<!DOCTYPE html>
 <html>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
-<meta name="generator=" content=" vym - view your mind - 2.8.8 - http://www.insilmaril.de/vym">
-<meta name="author" content="unknown user"> 
-<meta name="description" content=""> 
-<link rel='stylesheet' id='css.stylesheet' href='vym.css' />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>RoadMap Python - Dunossauro</title>
+<style>
+h1{
+   text-align: center;
+}
 
-<head><title>Python roadmap</title></head>
+h4.header{
+   text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.native-window #md-notification {
+    border: 1px solid #70717d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 0.8;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+.clear-btn-icon {
+    top: 8px;
+}
+
+
+</style>
+
+</head>
 <body>
-<center><img src="live_como_comecar_com_python.png"alt="Image of map: live_como_comecar_com_python.vym" usemap='#imagemap'></center>
-<table class="vym-toc">
-<tr><td class="vym-toc-title">
-Contents:
-</td></tr>
-<tr><td>
-<div class="vym-toc-branch-0"><a href="#mc:0">  Python</a></br>
-</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:0"> 1.  Básico 1</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:0"> 1.1.  Referências</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:0,bo:0"> 1.1.1.  Pense em Python</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:0,bo:0,bo:0"> 1.1.1.1.  https://penseallen.github.io/PensePython2e/</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:0,bo:1"> 1.1.2.  Python para zumbis</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:0,bo:1,bo:0"> 1.1.2.1.  https://www.youtube.com/playlist?list=PLUukMN0DTKCtbzhbYe2jdF4cr8MOWClXc</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:0,bo:2"> 1.1.3.  Nosso curso introdutório de python</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:0,bo:2,bo:0"> 1.1.3.1.  https://youtu.be/yTQDbqmv8Ho</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:1"> 1.2.  Controle de Fluxo</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:1,bo:0"> 1.2.1.  If</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:1,bo:1"> 1.2.2.  Try</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:2"> 1.3.  Tipos de dados</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:2,bo:0"> 1.3.1.  Numeros</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:2,bo:0,bo:0"> 1.3.1.1.  Int</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:2,bo:0,bo:1"> 1.3.1.2.  Float</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:2,bo:0,bo:2"> 1.3.1.3.  Complex</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:2,bo:1"> 1.3.2.  Texto</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:2,bo:1,bo:0"> 1.3.2.1.  String</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:2,bo:2"> 1.3.3.  Containers</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:2,bo:2,bo:0"> 1.3.3.1.  Listas</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:2,bo:2,bo:1"> 1.3.3.2.  Tuplas</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:2,bo:2,bo:2"> 1.3.3.3.  Dicionários</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:2,bo:2,bo:3"> 1.3.3.4.  https://youtu.be/cfmV8NUzAhw</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:3"> 1.4.  Laços de repetição</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:3,bo:0"> 1.4.1.  For</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:3,bo:1"> 1.4.2.  While</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:4"> 1.5.  Funções básicas</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:4,bo:0"> 1.5.1.  Conversão</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:4,bo:0,bo:0"> 1.5.1.1.  str()</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:4,bo:0,bo:1"> 1.5.1.2.  int()</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:4,bo:0,bo:2"> 1.5.1.3.  float()</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:4,bo:1"> 1.5.2.  I/O</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:4,bo:1,bo:0"> 1.5.2.1.  print()</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:4,bo:1,bo:1"> 1.5.2.2.  input()</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:5"> 1.6.  Operadores básicos</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:5,bo:0"> 1.6.1.  +</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:5,bo:1"> 1.6.2.  -</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:5,bo:2"> 1.6.3.  / e //</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:5,bo:3"> 1.6.4.  * e **</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:6"> 1.7.  Exercícios do básico 1</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:6,bo:0"> 1.7.1.  https://wiki.python.org.br/EstruturaSequencial</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:6,bo:1"> 1.7.2.  https://wiki.python.org.br/EstruturaDeDecisao</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:6,bo:2"> 1.7.3.  https://wiki.python.org.br/EstruturaDeRepeticao</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:6,bo:3"> 1.7.4.  https://wiki.python.org.br/ExerciciosListas</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:6,bo:4"> 1.7.5.  https://wiki.python.org.br/ExerciciosComStrings</a></br>
-</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:1"> 2.  Básico 2</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:0"> 2.1.  Criação de janelas</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:1,bo:0,bo:0"> 2.1.1.  TkInter</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:1,bo:0,bo:0,bo:0"> 2.1.1.1.  https://youtu.be/vNEwbfsZ-Js</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:1"> 2.2.  Criação de funções</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:2"> 2.3.  Desenhos com turtle</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:3"> 2.4.  Criar e manipulas módulos</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:1,bo:3,bo:0"> 2.4.1.  Organização de pastas</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:1,bo:3,bo:1"> 2.4.2.  Imports</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:4"> 2.5.  Manipulação de arquivos</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:1,bo:4,bo:0"> 2.5.1.  Leitura e escrita</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:1,bo:4,bo:0,bo:0"> 2.5.1.1.  https://youtu.be/sszTUlqAatc</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:1,bo:4,bo:1"> 2.5.2.  Copia / movimentação e etc...</a></br>
-</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:1,bo:4,bo:1,bo:0"> 2.5.2.1.  https://youtu.be/8cNpLnH1dsU</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:5"> 2.6.  Exercícios básico 2</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:1,bo:5,bo:0"> 2.6.1.  https://wiki.python.org.br/ExerciciosFuncoes</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:1,bo:5,bo:1"> 2.6.2.  https://wiki.python.org.br/ExerciciosArquivos</a></br>
-</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:2"> 3.  Básico 3</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:0"> 3.1.  Ambientes virtuais</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:1"> 3.2.  Instalação de bibliotecas extenas</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:2,bo:1,bo:0"> 3.2.1.  pip</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:2,bo:1,bo:1"> 3.2.2.  PyPi</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:2"> 3.3.  requirements.txt</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:3"> 3.4.  debugger</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:2,bo:3,bo:0"> 3.4.1.  https://youtu.be/7GnHDfV6KQ8</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:4"> 3.5.  Banco de dados</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:2,bo:4,bo:0"> 3.5.1.  https://youtu.be/2WUo5tD-eIA</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:5"> 3.6.  Padronização de código</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:2,bo:5,bo:0"> 3.6.1.  https://youtu.be/bqxXWfCrUXs</a></br>
-</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:3"> 4.  Instalação</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:3,bo:0"> 4.1.  Android</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:3,bo:0,bo:0"> 4.1.1.  Pydroid 3</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:3,bo:0,bo:1"> 4.1.2.  QPython</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:3,bo:1"> 4.2.  Windows</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:3,bo:1,bo:0"> 4.2.1.  https://www.python.org/downloads/</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:3,bo:1,bo:1"> 4.2.2.  Escolher um editor de texto</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:3,bo:2"> 4.3.  Linux / Mac</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:3,bo:2,bo:0"> 4.3.1.  Use seu gerenciador de pacotes para o python 3</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:3,bo:2,bo:1"> 4.3.2.  Escolher um editor de texto</a></br>
-</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:3,bo:3"> 4.4.  Sem instalar</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:3,bo:3,bo:0"> 4.4.1.  https://replit.com/languages/python3</a></br>
-</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:3,bo:3,bo:1"> 4.4.2.  https://colab.research.google.com</a></br>
-</div></td></tr>
-</table>
-
-
-<h1><span class='vym-branch-0' style='color:#000000' id='mc:0'> Python</span></h1>
-  
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:0'>1.  Básico 1</span></h2>
-    <ul class="vym-list-ul-2">
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:0'>1.1.  Referências</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:0,bo:0'>1.1.1.  Pense em Python</span>
-        <ul class="vym-list-ul-4">
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:0,bo:0,bo:0'><a href="https://penseallen.github.io/PensePython2e/">1.1.1.1.  https://penseallen.github.io/PensePython2e/<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        </ul>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:0,bo:1'>1.1.2.  Python para zumbis</span>
-        <ul class="vym-list-ul-4">
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:0,bo:1,bo:0'><a href="https://www.youtube.com/playlist?list=PLUukMN0DTKCtbzhbYe2jdF4cr8MOWClXc">1.1.2.1.  https://www.youtube.com/playlist?list=PLUukMN0DTKCtbzhbYe2jdF4cr8MOWClXc<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        </ul>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:0,bo:2'>1.1.3.  Nosso curso introdutório de python</span>
-        <ul class="vym-list-ul-4">
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:0,bo:2,bo:0'><a href="https://youtu.be/yTQDbqmv8Ho">1.1.3.1.  https://youtu.be/yTQDbqmv8Ho<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        </ul>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:1'>1.2.  Controle de Fluxo</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:1,bo:0'>1.2.1.  If</span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:1,bo:1'>1.2.2.  Try</span>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:2'>1.3.  Tipos de dados</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:2,bo:0'>1.3.1.  Numeros</span>
-        <ul class="vym-list-ul-4">
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:2,bo:0,bo:0'>1.3.1.1.  Int</span>  </li>
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:2,bo:0,bo:1'>1.3.1.2.  Float</span>  </li>
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:2,bo:0,bo:2'>1.3.1.3.  Complex</span>  </li>
-        </ul>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:2,bo:1'>1.3.2.  Texto</span>
-        <ul class="vym-list-ul-4">
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:2,bo:1,bo:0'>1.3.2.1.  String</span>  </li>
-        </ul>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:2,bo:2'>1.3.3.  Containers</span>
-        <ul class="vym-list-ul-4">
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:2,bo:2,bo:0'>1.3.3.1.  Listas</span>  </li>
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:2,bo:2,bo:1'>1.3.3.2.  Tuplas</span>  </li>
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:2,bo:2,bo:2'>1.3.3.3.  Dicionários</span>  </li>
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:2,bo:2,bo:3'><a href="https://youtu.be/cfmV8NUzAhw">1.3.3.4.  https://youtu.be/cfmV8NUzAhw<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        </ul>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:3'>1.4.  Laços de repetição</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:3,bo:0'>1.4.1.  For</span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:3,bo:1'>1.4.2.  While</span>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:4'>1.5.  Funções básicas</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:4,bo:0'>1.5.1.  Conversão</span>
-        <ul class="vym-list-ul-4">
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:4,bo:0,bo:0'>1.5.1.1.  str()</span>  </li>
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:4,bo:0,bo:1'>1.5.1.2.  int()</span>  </li>
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:4,bo:0,bo:2'>1.5.1.3.  float()</span>  </li>
-        </ul>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:4,bo:1'>1.5.2.  I/O</span>
-        <ul class="vym-list-ul-4">
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:4,bo:1,bo:0'>1.5.2.1.  print()</span>  </li>
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:4,bo:1,bo:1'>1.5.2.2.  input()</span>  </li>
-        </ul>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:5'>1.6.  Operadores básicos</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:5,bo:0'>1.6.1.  +</span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:5,bo:1'>1.6.2.  -</span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:5,bo:2'>1.6.3.  / e //</span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:5,bo:3'>1.6.4.  * e **</span>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:6'>1.7.  Exercícios do básico 1</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:6,bo:0'><a href="https://wiki.python.org.br/EstruturaSequencial">1.7.1.  https://wiki.python.org.br/EstruturaSequencial<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:6,bo:1'><a href="https://wiki.python.org.br/EstruturaDeDecisao">1.7.2.  https://wiki.python.org.br/EstruturaDeDecisao<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:6,bo:2'><a href="https://wiki.python.org.br/EstruturaDeRepeticao">1.7.3.  https://wiki.python.org.br/EstruturaDeRepeticao<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:6,bo:3'><a href="https://wiki.python.org.br/ExerciciosListas">1.7.4.  https://wiki.python.org.br/ExerciciosListas<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:6,bo:4'><a href="https://wiki.python.org.br/ExerciciosComStrings">1.7.5.  https://wiki.python.org.br/ExerciciosComStrings<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-      </ul>  </li>
-    </ul>
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:1'>2.  Básico 2</span></h2>
-    <ul class="vym-list-ul-2">
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:0'>2.1.  Criação de janelas</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:0,bo:0'>2.1.1.  TkInter</span>
-        <ul class="vym-list-ul-4">
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:1,bo:0,bo:0,bo:0'><a href="https://youtu.be/vNEwbfsZ-Js">2.1.1.1.  https://youtu.be/vNEwbfsZ-Js<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        </ul>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:1'>2.2.  Criação de funções</span>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:2'>2.3.  Desenhos com turtle</span>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:3'>2.4.  Criar e manipulas módulos</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:3,bo:0'>2.4.1.  Organização de pastas</span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:3,bo:1'>2.4.2.  Imports</span>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:4'>2.5.  Manipulação de arquivos</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:4,bo:0'>2.5.1.  Leitura e escrita</span>
-        <ul class="vym-list-ul-4">
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:1,bo:4,bo:0,bo:0'><a href="https://youtu.be/sszTUlqAatc">2.5.1.1.  https://youtu.be/sszTUlqAatc<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        </ul>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:4,bo:1'>2.5.2.  Copia / movimentação e etc...</span>
-        <ul class="vym-list-ul-4">
-          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:1,bo:4,bo:1,bo:0'><a href="https://youtu.be/8cNpLnH1dsU">2.5.2.1.  https://youtu.be/8cNpLnH1dsU<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        </ul>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:5'>2.6.  Exercícios básico 2</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:5,bo:0'><a href="https://wiki.python.org.br/ExerciciosFuncoes">2.6.1.  https://wiki.python.org.br/ExerciciosFuncoes<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:5,bo:1'><a href="https://wiki.python.org.br/ExerciciosArquivos">2.6.2.  https://wiki.python.org.br/ExerciciosArquivos<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-      </ul>  </li>
-    </ul>
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:2'>3.  Básico 3</span></h2>
-    <ul class="vym-list-ul-2">
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:0'>3.1.  Ambientes virtuais</span>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:1'>3.2.  Instalação de bibliotecas extenas</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:2,bo:1,bo:0'>3.2.1.  pip</span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:2,bo:1,bo:1'>3.2.2.  PyPi</span>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:2'>3.3.  requirements.txt</span>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:3'>3.4.  debugger</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:2,bo:3,bo:0'><a href="https://youtu.be/7GnHDfV6KQ8">3.4.1.  https://youtu.be/7GnHDfV6KQ8<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:4'>3.5.  Banco de dados</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:2,bo:4,bo:0'><a href="https://youtu.be/2WUo5tD-eIA">3.5.1.  https://youtu.be/2WUo5tD-eIA<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:5'>3.6.  Padronização de código</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:2,bo:5,bo:0'><a href="https://youtu.be/bqxXWfCrUXs">3.6.1.  https://youtu.be/bqxXWfCrUXs<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-      </ul>  </li>
-    </ul>
-  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:3'>4.  Instalação</span></h2>
-    <ul class="vym-list-ul-2">
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:3,bo:0'>4.1.  Android</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:3,bo:0,bo:0'>4.1.1.  Pydroid 3</span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:3,bo:0,bo:1'>4.1.2.  QPython</span>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:3,bo:1'>4.2.  Windows</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:3,bo:1,bo:0'><a href="https://www.python.org/downloads/">4.2.1.  https://www.python.org/downloads/<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:3,bo:1,bo:1'>4.2.2.  Escolher um editor de texto</span>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:3,bo:2'>4.3.  Linux / Mac</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:3,bo:2,bo:0'>4.3.1.  Use seu gerenciador de pacotes para o python 3</span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:3,bo:2,bo:1'>4.3.2.  Escolher um editor de texto</span>  </li>
-      </ul>  </li>
-      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:3,bo:3'>4.4.  Sem instalar</span>
-      <ul class="vym-list-ul-3">
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:3,bo:3,bo:0'><a href="https://replit.com/languages/python3">4.4.1.  https://replit.com/languages/python3<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:3,bo:3,bo:1'><a href="https://colab.research.google.com">4.4.2.  https://colab.research.google.com<img src="flags/flag-url.png" alt="Flag: url"></a></span>  </li>
-      </ul>  </li>
-    </ul>
-  
-
-<map name='imagemap'>
-  <area shape='rect' coords='8,468.054,88.7344,501.054' href='#mc:0' alt='Python'>
-  <area shape='rect' coords='223.947,695.345,311.932,726.345' href='#mc:0,bo:0' alt='Básico 1'>
-  <area shape='rect' coords='332.932,325.345,434.213,352.345' href='#mc:0,bo:0,bo:0' alt='Referências'>
-  <area shape='rect' coords='455.213,292.345,575.463,317.345' href='#mc:0,bo:0,bo:0,bo:0' alt='Pense em Python'>
-  <area shape='rect' coords='596.463,288.845,628.463,320.845' href='https://penseallen.github.io/PensePython2e/' alt='External link: https://penseallen.github.io/PensePython2e/'>
-  <area shape='rect' coords='628.463,295.845,924.479,320.845' href='#mc:0,bo:0,bo:0,bo:0,bo:0' alt='https://penseallen.github.io/PensePython2e/'>
-  <area shape='rect' coords='455.213,326.345,592.322,351.345' href='#mc:0,bo:0,bo:0,bo:1' alt='Python para zumbis'>
-  <area shape='rect' coords='613.322,322.845,645.322,354.845' href='https://www.youtube.com/playlist?list=PLUukMN0DTKCtbzhbYe2jdF4cr8MOWClXc' alt='External link: https://www.youtube.com/playlist?list=PLUukMN0DTKCtbzhbYe2jdF4cr8MOWClXc'>
-  <area shape='rect' coords='645.322,329.845,1181.92,354.845' href='#mc:0,bo:0,bo:0,bo:1,bo:0' alt='https://www.youtube.com/playlist?list=PLUukMN0DTKCtbzhbYe2jdF4cr8MOWClXc'>
-  <area shape='rect' coords='455.213,360.345,692.385,385.345' href='#mc:0,bo:0,bo:0,bo:2' alt='Nosso curso introdutório de python'>
-  <area shape='rect' coords='713.385,356.845,745.385,388.845' href='https://youtu.be/yTQDbqmv8Ho' alt='External link: https://youtu.be/yTQDbqmv8Ho'>
-  <area shape='rect' coords='745.385,363.845,960.557,388.845' href='#mc:0,bo:0,bo:0,bo:2,bo:0' alt='https://youtu.be/yTQDbqmv8Ho'>
-  <area shape='rect' coords='332.932,403.345,481.291,430.345' href='#mc:0,bo:0,bo:1' alt='Controle de Fluxo'>
-  <area shape='rect' coords='502.291,390.845,518.682,415.845' href='#mc:0,bo:0,bo:1,bo:0' alt='If'>
-  <area shape='rect' coords='502.291,417.845,529.354,442.845' href='#mc:0,bo:0,bo:1,bo:1' alt='Try'>
-  <area shape='rect' coords='332.932,541.845,461.291,568.845' href='#mc:0,bo:0,bo:2' alt='Tipos de dados'>
-  <area shape='rect' coords='482.291,471.845,548.666,496.845' href='#mc:0,bo:0,bo:2,bo:0' alt='Numeros'>
-  <area shape='rect' coords='569.666,444.845,594.822,469.845' href='#mc:0,bo:0,bo:2,bo:0,bo:0' alt='Int'>
-  <area shape='rect' coords='569.666,471.845,609.744,496.845' href='#mc:0,bo:0,bo:2,bo:0,bo:1' alt='Float'>
-  <area shape='rect' coords='569.666,498.845,634.635,523.845' href='#mc:0,bo:0,bo:2,bo:0,bo:2' alt='Complex'>
-  <area shape='rect' coords='482.291,525.845,524.51,550.845' href='#mc:0,bo:0,bo:2,bo:1' alt='Texto'>
-  <area shape='rect' coords='545.51,525.845,592.291,550.845' href='#mc:0,bo:0,bo:2,bo:1,bo:0' alt='String'>
-  <area shape='rect' coords='482.291,596.845,560.526,621.845' href='#mc:0,bo:0,bo:2,bo:2' alt='Containers'>
-  <area shape='rect' coords='581.526,552.845,626.947,577.845' href='#mc:0,bo:0,bo:2,bo:2,bo:0' alt='Listas'>
-  <area shape='rect' coords='581.526,579.845,630.307,604.845' href='#mc:0,bo:0,bo:2,bo:2,bo:1' alt='Tuplas'>
-  <area shape='rect' coords='581.526,606.845,661.697,631.845' href='#mc:0,bo:0,bo:2,bo:2,bo:2' alt='Dicionários'>
-  <area shape='rect' coords='581.526,633.845,613.526,665.845' href='https://youtu.be/cfmV8NUzAhw' alt='External link: https://youtu.be/cfmV8NUzAhw'>
-  <area shape='rect' coords='613.526,640.845,825.322,665.845' href='#mc:0,bo:0,bo:2,bo:2,bo:3' alt='https://youtu.be/cfmV8NUzAhw'>
-  <area shape='rect' coords='332.932,680.345,491.854,707.345' href='#mc:0,bo:0,bo:3' alt='Laços de repetição'>
-  <area shape='rect' coords='512.854,667.845,542.151,692.845' href='#mc:0,bo:0,bo:3,bo:0' alt='For'>
-  <area shape='rect' coords='512.854,694.845,557.135,719.845' href='#mc:0,bo:0,bo:3,bo:1' alt='While'>
-  <area shape='rect' coords='332.932,774.845,471.01,801.845' href='#mc:0,bo:0,bo:4' alt='Funções básicas'>
-  <area shape='rect' coords='492.01,748.845,568.947,773.845' href='#mc:0,bo:0,bo:4,bo:0' alt='Conversão'>
-  <area shape='rect' coords='589.947,721.845,625.276,746.845' href='#mc:0,bo:0,bo:4,bo:0,bo:0' alt='str()'>
-  <area shape='rect' coords='589.947,748.845,625.01,773.845' href='#mc:0,bo:0,bo:4,bo:0,bo:1' alt='int()'>
-  <area shape='rect' coords='589.947,775.845,637.26,800.845' href='#mc:0,bo:0,bo:4,bo:0,bo:2' alt='float()'>
-  <area shape='rect' coords='492.01,816.345,518.432,841.345' href='#mc:0,bo:0,bo:4,bo:1' alt='I/O'>
-  <area shape='rect' coords='539.432,802.845,588.088,827.845' href='#mc:0,bo:0,bo:4,bo:1,bo:0' alt='print()'>
-  <area shape='rect' coords='539.432,829.845,590.979,854.845' href='#mc:0,bo:0,bo:4,bo:1,bo:1' alt='input()'>
-  <area shape='rect' coords='332.932,896.345,498.947,923.345' href='#mc:0,bo:0,bo:5' alt='Operadores básicos'>
-  <area shape='rect' coords='519.947,856.845,538.838,881.845' href='#mc:0,bo:0,bo:5,bo:0' alt='+'>
-  <area shape='rect' coords='519.947,883.845,532.635,908.845' href='#mc:0,bo:0,bo:5,bo:1' alt='-'>
-  <area shape='rect' coords='519.947,910.845,558.307,935.845' href='#mc:0,bo:0,bo:5,bo:2' alt='/ e //'>
-  <area shape='rect' coords='519.947,937.845,563.682,962.845' href='#mc:0,bo:0,bo:5,bo:3' alt='* e **'>
-  <area shape='rect' coords='332.932,1035.35,517.322,1062.35' href='#mc:0,bo:0,bo:6' alt='Exercícios do básico 1'>
-  <area shape='rect' coords='538.322,964.845,570.322,996.845' href='https://wiki.python.org.br/EstruturaSequencial' alt='External link: https://wiki.python.org.br/EstruturaSequencial'>
-  <area shape='rect' coords='570.322,971.845,878.869,996.845' href='#mc:0,bo:0,bo:6,bo:0' alt='https://wiki.python.org.br/EstruturaSequencial'>
-  <area shape='rect' coords='538.322,998.845,570.322,1030.85' href='https://wiki.python.org.br/EstruturaDeDecisao' alt='External link: https://wiki.python.org.br/EstruturaDeDecisao'>
-  <area shape='rect' coords='570.322,1005.85,877.01,1030.85' href='#mc:0,bo:0,bo:6,bo:1' alt='https://wiki.python.org.br/EstruturaDeDecisao'>
-  <area shape='rect' coords='538.322,1032.85,570.322,1064.85' href='https://wiki.python.org.br/EstruturaDeRepeticao' alt='External link: https://wiki.python.org.br/EstruturaDeRepeticao'>
-  <area shape='rect' coords='570.322,1039.85,890.026,1064.85' href='#mc:0,bo:0,bo:6,bo:2' alt='https://wiki.python.org.br/EstruturaDeRepeticao'>
-  <area shape='rect' coords='538.322,1066.85,570.322,1098.85' href='https://wiki.python.org.br/ExerciciosListas' alt='External link: https://wiki.python.org.br/ExerciciosListas'>
-  <area shape='rect' coords='570.322,1073.85,849.526,1098.85' href='#mc:0,bo:0,bo:6,bo:3' alt='https://wiki.python.org.br/ExerciciosListas'>
-  <area shape='rect' coords='538.322,1100.85,570.322,1132.85' href='https://wiki.python.org.br/ExerciciosComStrings' alt='External link: https://wiki.python.org.br/ExerciciosComStrings'>
-  <area shape='rect' coords='570.322,1107.85,887.322,1132.85' href='#mc:0,bo:0,bo:6,bo:4' alt='https://wiki.python.org.br/ExerciciosComStrings'>
-  <area shape='rect' coords='214.043,1282.55,302.027,1313.55' href='#mc:0,bo:1' alt='Básico 2'>
-  <area shape='rect' coords='323.027,1160.55,478.324,1187.55' href='#mc:0,bo:1,bo:0' alt='Criação de janelas'>
-  <area shape='rect' coords='499.324,1161.55,554.261,1186.55' href='#mc:0,bo:1,bo:0,bo:0' alt='TkInter'>
-  <area shape='rect' coords='575.261,1158.05,607.261,1190.05' href='https://youtu.be/vNEwbfsZ-Js' alt='External link: https://youtu.be/vNEwbfsZ-Js'>
-  <area shape='rect' coords='607.261,1165.05,804.23,1190.05' href='#mc:0,bo:1,bo:0,bo:0,bo:0' alt='https://youtu.be/vNEwbfsZ-Js'>
-  <area shape='rect' coords='323.027,1192.05,484.199,1219.05' href='#mc:0,bo:1,bo:1' alt='Criação de funções'>
-  <area shape='rect' coords='323.027,1221.05,497.589,1248.05' href='#mc:0,bo:1,bo:2' alt='Desenhos com turtle'>
-  <area shape='rect' coords='323.027,1262.55,545.683,1289.55' href='#mc:0,bo:1,bo:3' alt='Criar e manipulas módulos'>
-  <area shape='rect' coords='566.683,1250.05,723.136,1275.05' href='#mc:0,bo:1,bo:3,bo:0' alt='Organização de pastas'>
-  <area shape='rect' coords='566.683,1277.05,624.574,1302.05' href='#mc:0,bo:1,bo:3,bo:1' alt='Imports'>
-  <area shape='rect' coords='323.027,1323.55,530.668,1350.55' href='#mc:0,bo:1,bo:4' alt='Manipulação de arquivos'>
-  <area shape='rect' coords='551.668,1307.55,665.011,1332.55' href='#mc:0,bo:1,bo:4,bo:0' alt='Leitura e escrita'>
-  <area shape='rect' coords='686.011,1304.05,718.011,1336.05' href='https://youtu.be/sszTUlqAatc' alt='External link: https://youtu.be/sszTUlqAatc'>
-  <area shape='rect' coords='718.011,1311.05,913.23,1336.05' href='#mc:0,bo:1,bo:4,bo:0,bo:0' alt='https://youtu.be/sszTUlqAatc'>
-  <area shape='rect' coords='551.668,1341.55,754.824,1366.55' href='#mc:0,bo:1,bo:4,bo:1' alt='Copia / movimentação e etc...'>
-  <area shape='rect' coords='775.824,1338.05,807.824,1370.05' href='https://youtu.be/8cNpLnH1dsU' alt='External link: https://youtu.be/8cNpLnH1dsU'>
-  <area shape='rect' coords='807.824,1345.05,1015.71,1370.05' href='#mc:0,bo:1,bo:4,bo:1,bo:0' alt='https://youtu.be/8cNpLnH1dsU'>
-  <area shape='rect' coords='323.027,1391.55,482.402,1418.55' href='#mc:0,bo:1,bo:5' alt='Exercícios básico 2'>
-  <area shape='rect' coords='503.402,1372.05,535.402,1404.05' href='https://wiki.python.org.br/ExerciciosFuncoes' alt='External link: https://wiki.python.org.br/ExerciciosFuncoes'>
-  <area shape='rect' coords='535.402,1379.05,830.261,1404.05' href='#mc:0,bo:1,bo:5,bo:0' alt='https://wiki.python.org.br/ExerciciosFuncoes'>
-  <area shape='rect' coords='503.402,1406.05,535.402,1438.05' href='https://wiki.python.org.br/ExerciciosArquivos' alt='External link: https://wiki.python.org.br/ExerciciosArquivos'>
-  <area shape='rect' coords='535.402,1413.05,833.683,1438.05' href='#mc:0,bo:1,bo:5,bo:1' alt='https://wiki.python.org.br/ExerciciosArquivos'>
-  <area shape='rect' coords='197.983,1539.5,285.967,1570.5' href='#mc:0,bo:2' alt='Básico 3'>
-  <area shape='rect' coords='306.967,1449,465.03,1476' href='#mc:0,bo:2,bo:0' alt='Ambientes virtuais'>
-  <area shape='rect' coords='306.967,1490.5,581.905,1517.5' href='#mc:0,bo:2,bo:1' alt='Instalação de bibliotecas extenas'>
-  <area shape='rect' coords='602.905,1478,631.014,1503' href='#mc:0,bo:2,bo:1,bo:0' alt='pip'>
-  <area shape='rect' coords='602.905,1505,637.576,1530' href='#mc:0,bo:2,bo:1,bo:1' alt='PyPi'>
-  <area shape='rect' coords='306.967,1532,449.092,1559' href='#mc:0,bo:2,bo:2' alt='requirements.txt'>
-  <area shape='rect' coords='306.967,1563.5,391.998,1590.5' href='#mc:0,bo:2,bo:3' alt='debugger'>
-  <area shape='rect' coords='412.998,1561,444.998,1593' href='https://youtu.be/7GnHDfV6KQ8' alt='External link: https://youtu.be/7GnHDfV6KQ8'>
-  <area shape='rect' coords='444.998,1568,656.545,1593' href='#mc:0,bo:2,bo:3,bo:0' alt='https://youtu.be/7GnHDfV6KQ8'>
-  <area shape='rect' coords='306.967,1597.5,442.826,1624.5' href='#mc:0,bo:2,bo:4' alt='Banco de dados'>
-  <area shape='rect' coords='463.826,1595,495.826,1627' href='https://youtu.be/2WUo5tD-eIA' alt='External link: https://youtu.be/2WUo5tD-eIA'>
-  <area shape='rect' coords='495.826,1602,699.639,1627' href='#mc:0,bo:2,bo:4,bo:0' alt='https://youtu.be/2WUo5tD-eIA'>
-  <area shape='rect' coords='306.967,1631.5,504.264,1658.5' href='#mc:0,bo:2,bo:5' alt='Padronização de código'>
-  <area shape='rect' coords='525.264,1629,557.264,1661' href='https://youtu.be/bqxXWfCrUXs' alt='External link: https://youtu.be/bqxXWfCrUXs'>
-  <area shape='rect' coords='557.264,1636,763.811,1661' href='#mc:0,bo:2,bo:5,bo:0' alt='https://youtu.be/bqxXWfCrUXs'>
-  <area shape='rect' coords='71.5832,119.5,176.771,150.5' href='#mc:0,bo:3' alt='Instalação'>
-  <area shape='rect' coords='197.771,17.5,267.614,44.5' href='#mc:0,bo:3,bo:0' alt='Android'>
-  <area shape='rect' coords='288.614,5,357.646,30' href='#mc:0,bo:3,bo:0,bo:0' alt='Pydroid 3'>
-  <area shape='rect' coords='288.614,32,351.864,57' href='#mc:0,bo:3,bo:0,bo:1' alt='QPython'>
-  <area shape='rect' coords='197.771,75,277.161,102' href='#mc:0,bo:3,bo:1' alt='Windows'>
-  <area shape='rect' coords='298.161,59,330.161,91' href='https://www.python.org/downloads/' alt='External link: https://www.python.org/downloads/'>
-  <area shape='rect' coords='330.161,66,569.771,91' href='#mc:0,bo:3,bo:1,bo:0' alt='https://www.python.org/downloads/'>
-  <area shape='rect' coords='298.161,93,486.833,118' href='#mc:0,bo:3,bo:1,bo:1' alt='Escolher um editor de texto'>
-  <area shape='rect' coords='197.771,145,296.802,172' href='#mc:0,bo:3,bo:2' alt='Linux / Mac'>
-  <area shape='rect' coords='317.802,120,580.38,170' href='#mc:0,bo:3,bo:2,bo:0' alt='Use seu gerenciador de pacotes para o python 3'>
-  <area shape='rect' coords='317.802,172,506.474,197' href='#mc:0,bo:3,bo:2,bo:1' alt='Escolher um editor de texto'>
-  <area shape='rect' coords='197.771,218.5,306.208,245.5' href='#mc:0,bo:3,bo:3' alt='Sem instalar'>
-  <area shape='rect' coords='327.208,199,359.208,231' href='https://replit.com/languages/python3' alt='External link: https://replit.com/languages/python3'>
-  <area shape='rect' coords='359.208,206,608.958,231' href='#mc:0,bo:3,bo:3,bo:0' alt='https://replit.com/languages/python3'>
-  <area shape='rect' coords='327.208,233,359.208,265' href='https://colab.research.google.com' alt='External link: https://colab.research.google.com'>
-  <area shape='rect' coords='359.208,240,588.989,265' href='#mc:0,bo:3,bo:3,bo:1' alt='https://colab.research.google.com'>
-</map>
-<hr/>
-<table class="vym-footer">   
-        <tr> 
-        <td class="vym-footerL">/home/dunossauro/roadmap/live_como_comecar_com_python.html</td> 
-            <td class="vym-footerC">2022-01-13</td> 
-            <td class="vym-footerR"> <a href='http://www.insilmaril.de/vym'>vym 2.8.8</a></td> 
-            </tr> 
-             </table>
-</body></html>
+<h1>Dicas para Aprender python</h1>
+<h4 class="header">Por <a href='https://linktr.ee/dunossauro' target="_blank">@dunossauro</a></h4>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script>((c,d,p)=>{const{Markmap:g}=c();window.mm=g.create("svg#mindmap",d==null?void 0:d(),p)})(()=>window.markmap,c=>(c=c||window.d3,{color:(N=>E=>N(E.p.i))(c.scaleOrdinal(c.schemeCategory10))}),{"t":"root","d":0,"v":"","c":[{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"Python Básico","c":[{"t":"heading","d":2,"p":{"lines":[2,3]},"v":"Instalação","c":[{"t":"heading","d":3,"p":{"lines":[4,5]},"v":"Android","c":[{"t":"list_item","d":5,"p":{"lines":[6,7]},"v":"Pydroid 3"},{"t":"list_item","d":5,"p":{"lines":[8,9]},"v":"QPython"}]},{"t":"heading","d":3,"p":{"lines":[10,11]},"v":"Windows","c":[{"t":"list_item","d":5,"p":{"lines":[12,13]},"v":"<a target=\"_blank\" href=\"https://www.python.org/downloads/\">Download Python | Python.org</a>"}]},{"t":"heading","d":3,"p":{"lines":[14,15]},"v":"Mac","c":[{"t":"list_item","d":5,"p":{"lines":[16,17]},"v":"Use seu gerenciador de pacotes (brew)"}]},{"t":"heading","d":3,"p":{"lines":[18,19]},"v":"Linux","c":[{"t":"list_item","d":5,"p":{"lines":[20,21]},"v":"Use seu gerenciador de pacotes para instalar o python 3"}]},{"t":"heading","d":3,"p":{"lines":[22,23]},"v":"Sem instalar","c":[{"t":"list_item","d":5,"p":{"lines":[24,25]},"v":"replit - <a target=\"_blank\" href=\"https://replit.com/languages/python3\">Python Online Compiler &amp; Interpreter - Replit</a>"},{"t":"list_item","d":5,"p":{"lines":[26,27]},"v":"Google colab - https://colab.research.google.com/"}]}]},{"t":"heading","d":2,"p":{"lines":[28,29]},"v":"Referências","c":[{"t":"list_item","d":4,"p":{"lines":[30,31]},"v":"Pense em Python - <a target=\"_blank\" href=\"https://penseallen.github.io/PensePython2e/\">Pense em Python | PensePython2e</a>"},{"t":"list_item","d":4,"p":{"lines":[32,33]},"v":"Python para Zumbis - <a target=\"_blank\" href=\"https://www.youtube.com/playlist?list=PLUukMN0DTKCtbzhbYe2jdF4cr8MOWClXc\">Python para Zumbis - YouTube</a>"},{"t":"list_item","d":4,"p":{"lines":[34,35]},"v":"O curso aqui do canal - <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=yTQDbqmv8Ho&amp;feature=youtu.be&amp;ab_channel=EduardoMendes\">Curso introdutório de Python - YouTube</a>"},{"t":"list_item","d":4,"p":{"lines":[36,37]},"v":"Ignorancia zero - <a target=\"_blank\" href=\"https://www.youtube.com/playlist?list=PLfCKf0-awunOu2WyLe2pSD2fXUo795xRe\">Aulas Python - YouTube</a>"},{"t":"list_item","d":4,"p":{"lines":[38,39]},"v":"Curso em Vídeo * - <a target=\"_blank\" href=\"https://www.youtube.com/playlist?list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0\">Curso em vídeo - Python - YouTube</a>"}]},{"t":"heading","d":2,"p":{"lines":[40,41]},"v":"Básico I","c":[{"t":"list_item","d":4,"p":{"lines":[42,43]},"v":"Controle de fluxo","c":[{"t":"list_item","d":6,"p":{"lines":[44,45]},"v":"if"},{"t":"list_item","d":6,"p":{"lines":[46,47]},"v":"try"}]},{"t":"list_item","d":4,"p":{"lines":[48,49]},"v":"Tipos de dados","c":[{"t":"list_item","d":6,"p":{"lines":[50,51]},"v":"Números","c":[{"t":"list_item","d":8,"p":{"lines":[52,53]},"v":"Int"},{"t":"list_item","d":8,"p":{"lines":[54,55]},"v":"Float"},{"t":"list_item","d":8,"p":{"lines":[56,57]},"v":"Complex"}]},{"t":"list_item","d":6,"p":{"lines":[58,59]},"v":"Texto","c":[{"t":"list_item","d":8,"p":{"lines":[60,61]},"v":"Strings"}]},{"t":"list_item","d":6,"p":{"lines":[62,63]},"v":"Containers","c":[{"t":"list_item","d":8,"p":{"lines":[64,65]},"v":"Listas"},{"t":"list_item","d":8,"p":{"lines":[66,67]},"v":"Tuplas"},{"t":"list_item","d":8,"p":{"lines":[68,69]},"v":"Dicionários"},{"t":"list_item","d":8,"p":{"lines":[70,71]},"v":"Referência - <a target=\"_blank\" href=\"https://youtu.be/cfmV8NUzAhw\">Live de Python #17 - Tipos de containers e suas funcionalidades - YouTube</a>"}]}]},{"t":"list_item","d":4,"p":{"lines":[72,73]},"v":"Funções básicas","c":[{"t":"list_item","d":6,"p":{"lines":[74,75]},"v":"Conversão","c":[{"t":"list_item","d":8,"p":{"lines":[76,77]},"v":"str()"},{"t":"list_item","d":8,"p":{"lines":[78,79]},"v":"int()"},{"t":"list_item","d":8,"p":{"lines":[80,81]},"v":"float()"}]},{"t":"list_item","d":6,"p":{"lines":[82,83]},"v":"Entrada/Saída","c":[{"t":"list_item","d":8,"p":{"lines":[84,85]},"v":"pint()"},{"t":"list_item","d":8,"p":{"lines":[86,87]},"v":"input()"}]},{"t":"list_item","d":6,"p":{"lines":[88,89]},"v":"Operadores básicos","c":[{"t":"list_item","d":8,"p":{"lines":[90,91]},"v":"<code>+</code>"},{"t":"list_item","d":8,"p":{"lines":[92,93]},"v":"<code>-</code>"},{"t":"list_item","d":8,"p":{"lines":[94,95]},"v":"<code>/</code> e <code>//</code>"},{"t":"list_item","d":8,"p":{"lines":[96,97]},"v":"<code>*</code> e <code>**</code>"}]},{"t":"list_item","d":6,"p":{"lines":[98,99]},"v":"Laços de repetição","c":[{"t":"list_item","d":8,"p":{"lines":[100,101]},"v":"For"},{"t":"list_item","d":8,"p":{"lines":[101,102]},"v":"While"}]}]},{"t":"list_item","d":4,"p":{"lines":[103,104]},"v":"Exercícios para fixação","c":[{"t":"list_item","d":6,"p":{"lines":[105,106]},"v":"<a target=\"_blank\" href=\"https://wiki.python.org.br/EstruturaSequencial\">EstruturaSequencial - PythonBrasil</a>"},{"t":"list_item","d":6,"p":{"lines":[106,107]},"v":"<a target=\"_blank\" href=\"https://wiki.python.org.br/EstruturaDeDecisao\">EstruturaDeDecisao - PythonBrasil</a>"},{"t":"list_item","d":6,"p":{"lines":[107,108]},"v":"<a target=\"_blank\" href=\"https://wiki.python.org.br/EstruturaDeRepeticao\">EstruturaDeRepeticao - PythonBrasil</a>"},{"t":"list_item","d":6,"p":{"lines":[108,109]},"v":"<a target=\"_blank\" href=\"https://wiki.python.org.br/ExerciciosListas\">ExerciciosListas - PythonBrasil</a>"},{"t":"list_item","d":6,"p":{"lines":[109,110]},"v":"<a target=\"_blank\" href=\"https://wiki.python.org.br/ExerciciosComStrings\">ExerciciosComStrings - PythonBrasil</a>"}]}]},{"t":"heading","d":2,"p":{"lines":[111,112]},"v":"Básico II","c":[{"t":"list_item","d":4,"p":{"lines":[113,114]},"v":"Criação de funções - <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=xR57ED4DfFY&amp;list=PLOQgLBuj2-3LRIKxqcse1EL4hXhUFuHsR&amp;ab_channel=EduardoMendes\">Minissérie Pythonica: Funções #1 - Definindo funções - YouTube</a>"},{"t":"list_item","d":4,"p":{"lines":[115,116]},"v":"Desenhos com turtle"},{"t":"list_item","d":4,"p":{"lines":[117,118]},"v":"Criar e manipular diretórios - <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=sszTUlqAatc&amp;ab_channel=EduardoMendes\">Live de Python #34 - Trabalhando com arquivos de texto - YouTube</a>"},{"t":"list_item","d":4,"p":{"lines":[119,120]},"v":"Manipulação de arquivos","c":[{"t":"list_item","d":6,"p":{"lines":[121,122]},"v":"Leitura e escrita - <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=sszTUlqAatc&amp;ab_channel=EduardoMendes\">Live de Python #34 - Trabalhando com arquivos de texto - YouTube</a>"},{"t":"list_item","d":6,"p":{"lines":[123,124]},"v":"Copiar, colar, cortar ... - <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=sszTUlqAatc&amp;ab_channel=EduardoMendes\">Live de Python #34 - Trabalhando com arquivos de texto - YouTube</a>"}]},{"t":"list_item","d":4,"p":{"lines":[125,126]},"v":"Exercícios para fixação","c":[{"t":"list_item","d":6,"p":{"lines":[127,128]},"v":"<a target=\"_blank\" href=\"https://wiki.python.org.br/ExerciciosFuncoes\">ExerciciosFuncoes - PythonBrasil</a>"},{"t":"list_item","d":6,"p":{"lines":[129,130]},"v":"<a target=\"_blank\"  href=\"https://wiki.python.org.br/ExerciciosArquivos\">ExerciciosArquivos - PythonBrasil</a>"}]}]},{"t":"heading","d":2,"p":{"lines":[131,132]},"v":"Básico III","c":[{"t":"list_item","d":4,"p":{"lines":[133,134]},"v":"Instalação de bibliotecas externas","c":[{"t":"list_item","d":6,"p":{"lines":[135,136]},"v":"pip"},{"t":"list_item","d":6,"p":{"lines":[137,138]},"v":"pypi"},{"t":"list_item","d":6,"p":{"lines":[139,140]},"v":"conda"}]},{"t":"list_item","d":4,"p":{"lines":[141,142]},"v":"Ambientes virtuais"},{"t":"list_item","d":4,"p":{"lines":[143,144]},"v":"requirements.txt"},{"t":"list_item","d":4,"p":{"lines":[145,146]},"v":"debugger","c":[{"t":"list_item","d":6,"p":{"lines":[147,148]},"v":"<a target=\"_blank\" href=\"https://www.youtube.com/watch?v=7GnHDfV6KQ8&amp;feature=youtu.be&amp;ab_channel=EduardoMendes\">Live de Python #5 - Usando o Python debugger - YouTube</a>"}]},{"t":"list_item","d":4,"p":{"lines":[149,150]},"v":"Banco de dados","c":[{"t":"list_item","d":6,"p":{"lines":[151,152]},"v":"<a target=\"_blank\" href=\"https://www.youtube.com/watch?v=2WUo5tD-eIA&amp;feature=youtu.be&amp;ab_channel=EduardoMendes\">Live de Python #8 - CRUD com SQLite3 - YouTube</a>"}]},{"t":"list_item","d":4,"p":{"lines":[153,154]},"v":"Padronização de código","c":[{"t":"list_item","d":6,"p":{"lines":[155,156]},"v":"<a target=\"_blank\" href=\"https://www.youtube.com/watch?v=bqxXWfCrUXs&amp;feature=youtu.be&amp;ab_channel=EduardoMendes\">Live de Python #39 - Guias de estilo e padronização de código - YouTube</a>"}]}]}]},{"t":"heading","d":1,"p":{"lines":[157,158]},"v":"Python e suas bibliotecas","c":[{"t":"heading","d":2,"p":{"lines":[159,160]},"v":"Cientifico","c":[{"t":"list_item","d":4,"p":{"lines":[161,162]},"v":"Numpy (Cálculo)"},{"t":"list_item","d":4,"p":{"lines":[163,164]},"v":"Sympy (Matemática simbolica)"},{"t":"list_item","d":4,"p":{"lines":[165,166]},"v":"Scipy (Base)"},{"t":"list_item","d":4,"p":{"lines":[167,168]},"v":"Pandas (Análise de dados)"},{"t":"list_item","d":4,"p":{"lines":[169,170]},"v":"NLTK (Processamento de linguagem)"}]},{"t":"heading","d":2,"p":{"lines":[171,172]},"v":"Aprendizado de máquina","c":[{"t":"list_item","d":4,"p":{"lines":[173,174]},"v":"Spacy (Processamento de linguagem)"},{"t":"list_item","d":4,"p":{"lines":[175,176]},"v":"Pytorch (Deep Learning)"},{"t":"list_item","d":4,"p":{"lines":[177,178]},"v":"scikit-learn"},{"t":"list_item","d":4,"p":{"lines":[179,180]},"v":"Keras (wrapper simples)"},{"t":"list_item","d":4,"p":{"lines":[181,182]},"v":"tensorflow"},{"t":"list_item","d":4,"p":{"lines":[183,184]},"v":"OpenCV (Visão computacional)"}]},{"t":"heading","d":2,"p":{"lines":[185,186]},"v":"Criativo","c":[{"t":"list_item","d":4,"p":{"lines":[187,188]},"v":"Blender (Motion Design)"},{"t":"list_item","d":4,"p":{"lines":[189,190]},"v":"Freecad (Modelagem 3D)"},{"t":"list_item","d":4,"p":{"lines":[191,192]},"v":"FoxDot (Música dom Python)"},{"t":"list_item","d":4,"p":{"lines":[193,194]},"v":"Processing (Artes gráficas)"}]},{"t":"heading","d":2,"p":{"lines":[195,196]},"v":"mobile","c":[{"t":"list_item","d":4,"p":{"lines":[197,198]},"v":"Beeware (Nativo)"},{"t":"list_item","d":4,"p":{"lines":[199,200]},"v":"kivy (MD, Cupertino)"}]},{"t":"heading","d":2,"p":{"lines":[201,202]},"v":"web","c":[{"t":"list_item","d":4,"p":{"lines":[203,204]},"v":"flask"},{"t":"list_item","d":4,"p":{"lines":[205,206]},"v":"django"},{"t":"list_item","d":4,"p":{"lines":[207,208]},"v":"fastapi"}]},{"t":"heading","d":2,"p":{"lines":[209,210]},"v":"Desktop (Desenvolvimento desktop)","c":[{"t":"list_item","d":4,"p":{"lines":[211,212]},"v":"QT (PyQT/Pyside)"},{"t":"list_item","d":4,"p":{"lines":[213,214]},"v":"GTK (pyGTK)"},{"t":"list_item","d":4,"p":{"lines":[215,216]},"v":"TK"}]},{"t":"heading","d":2,"p":{"lines":[217,218]},"v":"cli (Ferramentas de linha de comando)","c":[{"t":"list_item","d":4,"p":{"lines":[219,220]},"v":"click / Typer (Criação de ferramentas)"},{"t":"list_item","d":4,"p":{"lines":[221,222]},"v":"google-fire"},{"t":"list_item","d":4,"p":{"lines":[223,224]},"v":"rich (Interfaces no terminal)"}]},{"t":"heading","d":2,"p":{"lines":[225,226]},"v":"Vizualização (Plots)","c":[{"t":"list_item","d":4,"p":{"lines":[227,228]},"v":"matplotlib"},{"t":"list_item","d":4,"p":{"lines":[229,230]},"v":"seborn"},{"t":"list_item","d":4,"p":{"lines":[231,232]},"v":"dash"},{"t":"list_item","d":4,"p":{"lines":[233,234]},"v":"bokeh"}]},{"t":"heading","d":2,"p":{"lines":[235,236]},"v":"DevOps","c":[{"t":"list_item","d":4,"p":{"lines":[237,238]},"v":"Ansible (Automação)"},{"t":"list_item","d":4,"p":{"lines":[239,240]},"v":"Pulumi (IaaC)"},{"t":"list_item","d":4,"p":{"lines":[241,242]},"v":"BuildBot (CI)"},{"t":"list_item","d":4,"p":{"lines":[243,244]},"v":"docker-compose (Ambiente)"}]},{"t":"heading","d":2,"p":{"lines":[245,246]},"v":"Automação","c":[{"t":"list_item","d":4,"p":{"lines":[247,248]},"v":"Pyautogui (Automação desktop)"},{"t":"list_item","d":4,"p":{"lines":[249,250]},"v":"Scapy (Scrapping)"},{"t":"list_item","d":4,"p":{"lines":[251,252]},"v":"AirFlow (ETLs)"}]},{"t":"heading","d":2,"p":{"lines":[253,254]},"v":"Testes","c":[{"t":"list_item","d":4,"p":{"lines":[255,256]},"v":"Pytest (geral)"},{"t":"list_item","d":4,"p":{"lines":[257,258]},"v":"Behave (BDD)"},{"t":"list_item","d":4,"p":{"lines":[259,260]},"v":"Selenium (Web)"},{"t":"list_item","d":4,"p":{"lines":[261,262]},"v":"Appium (Mobile)"}]},{"t":"heading","d":2,"p":{"lines":[263,264]},"v":"Banco de dados","c":[{"t":"list_item","d":4,"p":{"lines":[265,266]},"v":"SQLite (Nativo)"},{"t":"list_item","d":4,"p":{"lines":[267,268]},"v":"SQLAlchemy (ORM)"}]},{"t":"heading","d":2,"p":{"lines":[269,270]},"v":"Desenvolvimento de Jogos","c":[{"t":"list_item","d":4,"p":{"lines":[271,272]},"v":"Pygame (lib padrão)"},{"t":"list_item","d":4,"p":{"lines":[273,274]},"v":"pyglet (pygame atualizado)"},{"t":"list_item","d":4,"p":{"lines":[275,276]},"v":"Panda3D (Jogos 3D)"},{"t":"list_item","d":4,"p":{"lines":[277,278]},"v":"Pyxel (Retro gaming)"}]},{"t":"heading","d":2,"p":{"lines":[279,280]},"v":"Redes / Segurança de redes","c":[{"t":"list_item","d":4,"p":{"lines":[281,282]},"v":"ScaPy (Manipulação de protocolos)"},{"t":"list_item","d":4,"p":{"lines":[283,284]},"v":"nmap (Scanner de rede)"},{"t":"list_item","d":4,"p":{"lines":[285,286]},"v":"Requests (uso geral para http)"}]}]}],"p":{}})</script>
+<div id='write'  class=''><h2 id='python-básico'><span>Python Básico</span></h2><h3 id='instalação'><span>Instalação</span></h3><h4 id='android'><span>Android</span></h4><ul><li><span>Pydroid 3</span></li><li><span>QPython</span></li></ul><h4 id='windows'><span>Windows</span></h4><ul><li><a target=\"_blank\" href='https://www.python.org/downloads/'><span>Download Python | Python.org</span></a></li></ul><h4 id='mac'><span>Mac</span></h4><ul><li><span>Use seu gerenciador de pacotes (brew)</span></li></ul><h4 id='linux'><span>Linux</span></h4><ul><li><span>Use seu gerenciador de pacotes para instalar o python 3</span></li></ul><h4 id='sem-instalar'><span>Sem instalar</span></h4><ul><li><span>replit - </span><a target=\"_blank\" href='https://replit.com/languages/python3'><span>Python Online Compiler </span>&amp;<span> Interpreter - Replit</span></a></li><li><span>Google colab - </span><a target=\"_blank\" href='https://colab.research.google.com/' target='_blank' class='url'>https://colab.research.google.com/</a></li></ul><h3 id='referências'><span>Referências</span></h3><ul><li><span>Pense em Python - </span><a target=\"_blank\" href='https://penseallen.github.io/PensePython2e/'><span>Pense em Python | PensePython2e</span></a></li><li><span>Python para Zumbis - </span><a href='https://www.youtube.com/playlist?list=PLUukMN0DTKCtbzhbYe2jdF4cr8MOWClXc'><span>Python para Zumbis - YouTube</span></a></li><li><span>O curso aqui do canal - </span><a target=\"_blank\" href='https://www.youtube.com/watch?v=yTQDbqmv8Ho&amp;feature=youtu.be&amp;ab_channel=EduardoMendes'><span>Curso introdutório de Python - YouTube</span></a></li><li><span>Ignorancia zero - </span><a target=\"_blank\" href='https://www.youtube.com/playlist?list=PLfCKf0-awunOu2WyLe2pSD2fXUo795xRe'><span>Aulas Python - YouTube</span></a></li><li><span>Curso em Vídeo * - </span><a target=\"_blank\" href='https://www.youtube.com/playlist?list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0'><span>Curso em vídeo - Python - YouTube</span></a></li></ul><h3 id='básico-i'><span>Básico I</span></h3><ul><li><p><span>Controle de fluxo</span></p><ul><li><span>if</span></li><li><span>try</span></li></ul></li><li><p><span>Tipos de dados</span></p><ul><li><p><span>Números</span></p><ul><li><span>Int</span></li><li><span>Float</span></li><li><span>Complex</span></li></ul></li><li><p><span>Texto</span></p><ul><li><span>Strings</span></li></ul></li><li><p><span>Containers</span></p><ul><li><span>Listas</span></li><li><span>Tuplas</span></li><li><span>Dicionários</span></li><li><span>Referência - </span><a target=\"_blank\" href='https://youtu.be/cfmV8NUzAhw'><span>Live de Python #17 - Tipos de containers e suas funcionalidades - YouTube</span></a></li></ul></li></ul></li><li><p><span>Funções básicas</span></p><ul><li><p><span>Conversão</span></p><ul><li><span>str()</span></li><li><span>int()</span></li><li><span>float()</span></li></ul></li><li><p><span>Entrada/Saída</span></p><ul><li><span>pint()</span></li><li><span>input()</span></li></ul></li><li><p><span>Operadores básicos</span></p><ul><li><code>+</code></li><li><code>-</code></li><li><code>/</code><span> e </span><code>//</code></li><li><code>*</code><span> e </span><code>**</code></li></ul></li><li><p><span>Laços de repetição</span></p><ul><li><span>For</span></li><li><span>While</span></li></ul></li></ul></li><li><p><span>Exercícios para fixação</span></p><ul><li><a target=\"_blank\" href='https://wiki.python.org.br/EstruturaSequencial'><span>EstruturaSequencial - PythonBrasil</span></a></li><li><a href='https://wiki.python.org.br/EstruturaDeDecisao'><span>EstruturaDeDecisao - PythonBrasil</span></a></li><li><a target=\"_blank\" href='https://wiki.python.org.br/EstruturaDeRepeticao'><span>EstruturaDeRepeticao - PythonBrasil</span></a></li><li><a target=\"_blank\" href='https://wiki.python.org.br/ExerciciosListas'><span>ExerciciosListas - PythonBrasil</span></a></li><li><a target=\"_blank\" href='https://wiki.python.org.br/ExerciciosComStrings'><span>ExerciciosComStrings - PythonBrasil</span></a></li></ul></li></ul><h3 id='básico-ii'><span>Básico II</span></h3><ul><li><p><span>Criação de funções - </span><a target=\"_blank\" href='https://www.youtube.com/watch?v=xR57ED4DfFY&amp;list=PLOQgLBuj2-3LRIKxqcse1EL4hXhUFuHsR&amp;ab_channel=EduardoMendes'><span>Minissérie Pythonica: Funções #1 - Definindo funções - YouTube</span></a></p></li><li><p><span>Desenhos com turtle</span></p></li><li><p><span>Criar e manipular diretórios - </span><a target=\"_blank\" href='https://www.youtube.com/watch?v=sszTUlqAatc&amp;ab_channel=EduardoMendes'><span>Live de Python #34 - Trabalhando com arquivos de texto - YouTube</span></a></p></li><li><p><span>Manipulação de arquivos</span></p><ul><li><span>Leitura e escrita - </span><a target=\"_blank\"  href='https://www.youtube.com/watch?v=sszTUlqAatc&amp;ab_channel=EduardoMendes'><span>Live de Python #34 - Trabalhando com arquivos de texto - YouTube</span></a></li><li><span>Copiar, colar, cortar ... - </span><a target=\"_blank\" href='https://www.youtube.com/watch?v=sszTUlqAatc&amp;ab_channel=EduardoMendes'><span>Live de Python #34 - Trabalhando com arquivos de texto - YouTube</span></a></li></ul></li><li><p><span>Exercícios para fixação</span></p><ul><li><a target=\"_blank\" href='https://wiki.python.org.br/ExerciciosFuncoes'><span>ExerciciosFuncoes - PythonBrasil</span></a></li><li><a target=\"_blank\" href='https://wiki.python.org.br/ExerciciosArquivos'><span>ExerciciosArquivos - PythonBrasil</span></a></li></ul></li></ul><h3 id='básico-iii'><span>Básico III</span></h3><ul><li><p><span>Instalação de bibliotecas externas</span></p><ul><li><span>pip</span></li><li><span>pypi</span></li><li><span>conda</span></li></ul></li><li><p><span>Ambientes virtuais</span></p></li><li><p><span>requirements.txt</span></p></li><li><p><span>debugger</span></p><ul><li><a target=\"_blank\" href='https://www.youtube.com/watch?v=7GnHDfV6KQ8&amp;feature=youtu.be&amp;ab_channel=EduardoMendes'><span>Live de Python #5 - Usando o Python debugger - YouTube</span></a></li></ul></li><li><p><span>Banco de dados</span></p><ul><li><a target=\"_blank\" href='https://www.youtube.com/watch?v=2WUo5tD-eIA&amp;feature=youtu.be&amp;ab_channel=EduardoMendes'><span>Live de Python #8 - CRUD com SQLite3 - YouTube</span></a></li></ul></li><li><p><span>Padronização de código</span></p><ul><li><a target=\"_blank\" href='https://www.youtube.com/watch?v=bqxXWfCrUXs&amp;feature=youtu.be&amp;ab_channel=EduardoMendes'><span>Live de Python #39 - Guias de estilo e padronização de código - YouTube</span></a></li></ul></li></ul><h2 id='python-e-suas-bibliotecas'><span>Python e suas bibliotecas</span></h2><h3 id='cientifico'><span>Cientifico</span></h3><ul><li><span>Numpy (Cálculo)</span></li><li><span>Sympy (Matemática simbolica)</span></li><li><span>Scipy (Base)</span></li><li><span>Pandas (Análise de dados)</span></li><li><span>NLTK (Processamento de linguagem)</span></li></ul><h3 id='aprendizado-de-máquina'><span>Aprendizado de máquina</span></h3><ul><li><span>Spacy (Processamento de linguagem)</span></li><li><span>Pytorch (Deep Learning)</span></li><li><span>scikit-learn</span></li><li><span>Keras (wrapper simples)</span></li><li><span>tensorflow</span></li><li><span>OpenCV (Visão computacional)</span></li></ul><h3 id='criativo'><span>Criativo</span></h3><ul><li><span>Blender (Motion Design)</span></li><li><span>Freecad (Modelagem 3D)</span></li><li><span>FoxDot (Música dom Python)</span></li><li><span>Processing (Artes gráficas)</span></li></ul><h3 id='mobile'><span>mobile</span></h3><ul><li><span>Beeware (Nativo)</span></li><li><span>kivy (MD, Cupertino)</span></li></ul><h3 id='web'><span>web</span></h3><ul><li><span>flask</span></li><li><span>django</span></li><li><span>fastapi</span></li></ul><h3 id='desktop-desenvolvimento-desktop'><span>Desktop (Desenvolvimento desktop)</span></h3><ul><li><span>QT (PyQT/Pyside)</span></li><li><span>GTK (pyGTK)</span></li><li><span>TK</span></li></ul><h3 id='cli-ferramentas-de-linha-de-comando'><span>cli (Ferramentas de linha de comando)</span></h3><ul><li><span>click / Typer (Criação de ferramentas)</span></li><li><span>google-fire</span></li><li><span>rich (Interfaces no terminal)</span></li></ul><h3 id='vizualização-plots'><span>Vizualização (Plots)</span></h3><ul><li><span>matplotlib</span></li><li><span>seborn</span></li><li><span>dash</span></li><li><span>bokeh</span></li></ul><h3 id='devops'><span>DevOps</span></h3><ul><li><span>Ansible (Automação)</span></li><li><span>Pulumi (IaaC)</span></li><li><span>BuildBot (CI)</span></li><li><span>docker-compose (Ambiente)</span></li></ul><h3 id='automação'><span>Automação</span></h3><ul><li><span>Pyautogui (Automação desktop)</span></li><li><span>Scapy (Scrapping)</span></li><li><span>AirFlow (ETLs)</span></li></ul><h3 id='testes'><span>Testes</span></h3><ul><li><span>Pytest (geral)</span></li><li><span>Behave (BDD)</span></li><li><span>Selenium (Web)</span></li><li><span>Appium (Mobile)</span></li></ul><h3 id='banco-de-dados'><span>Banco de dados</span></h3><ul><li><span>SQLite (Nativo)</span></li><li><span>SQLAlchemy (ORM)</span></li></ul><h3 id='desenvolvimento-de-jogos'><span>Desenvolvimento de Jogos</span></h3><ul><li><span>Pygame (lib padrão)</span></li><li><span>pyglet (pygame atualizado)</span></li><li><span>Panda3D (Jogos 3D)</span></li><li><span>Pyxel (Retro gaming)</span></li></ul><h3 id='redes--segurança-de-redes'><span>Redes / Segurança de redes</span></h3><ul><li><span>ScaPy (Manipulação de protocolos)</span></li><li><span>nmap (Scanner de rede)</span></li><li><span>Requests (uso geral para http)</span></li></ul></div></div>
+</body>
+</html>
