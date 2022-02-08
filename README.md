@@ -120,9 +120,9 @@
 
 - Manipulação de arquivos
   
-  - Leitura e escrita - [Live de Python #34 - Trabalhando com arquivos de texto - YouTube](https://www.youtube.com/watch?v=sszTUlqAatc&ab_channel=EduardoMendes)
+  - Leitura e escrita - [Live de Python #16 - Manipulação de arquivos e diretórios - YouTube](https://youtu.be/8cNpLnH1dsU)
   
-  - Copiar, colar, cortar ... - [Live de Python #34 - Trabalhando com arquivos de texto - YouTube](https://www.youtube.com/watch?v=sszTUlqAatc&ab_channel=EduardoMendes)
+  - Copiar, colar, cortar ... - [Live de Python #16 - Manipulação de arquivos e diretórios - YouTube](https://youtu.be/8cNpLnH1dsU)
 
 - Exercícios para fixação
   
