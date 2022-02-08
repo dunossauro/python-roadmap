@@ -137,15 +137,15 @@
   - pip
   - pypi
   - conda
-  - Referência: https://youtu.be/naGF7EIUFp0
+  - Referência: [Ambientes virtuais e instalação de bibliotecas - Live de Python #191 - YouTube](https://youtu.be/naGF7EIUFp0)
 
 - Ambientes virtuais
   
-  - https://youtu.be/naGF7EIUFp0
+  - [Ambientes virtuais e instalação de bibliotecas - Live de Python #191 - YouTube](https://youtu.be/naGF7EIUFp0)
 
 - requirements.txt
   
-  - https://youtu.be/naGF7EIUFp0
+  - [Ambientes virtuais e instalação de bibliotecas - Live de Python #191 - YouTube](https://youtu.be/naGF7EIUFp0)
 
 - debugger
   
