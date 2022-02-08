@@ -72,7 +72,7 @@
     - Referência - [Live de Python #17 - Tipos de containers e suas funcionalidades - YouTube](https://youtu.be/cfmV8NUzAhw)
 
 - Funções básicas
-  
+
   - Conversão
     
     - str()
@@ -96,11 +96,12 @@
     - `/` e `//`
     
     - `*` e `**`
-  
-  - Laços de repetição
     
-    - For
-    - While
+- Laços de repetição
+  
+  - For
+
+  - While
 
 - Exercícios para fixação
   
