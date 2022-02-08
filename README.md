@@ -24,7 +24,7 @@
 
 - replit - [Python Online Compiler &amp; Interpreter - Replit](https://replit.com/languages/python3)
 
-- Google colab - https://colab.research.google.com/
+- Google colab - [Google Colab](https://colab.research.google.com/)
 
 ### Referências
 
@@ -43,8 +43,8 @@
 - Controle de fluxo
   
   - if
-  
   - try
+    - [Live de Python #60 - Exceções - YouTube](https://youtu.be/sJpNfZqLpoI)
 
 - Tipos de dados
   
@@ -59,6 +59,7 @@
   - Texto
     
     - Strings
+      - [Formatação de strings - Live de Python #181 - YouTube](https://youtu.be/fkGFNOOmXsY)
   
   - Containers
     
@@ -134,14 +135,17 @@
 - Instalação de bibliotecas externas
   
   - pip
-  
   - pypi
-  
   - conda
+  - Referência: https://youtu.be/naGF7EIUFp0
 
 - Ambientes virtuais
+  
+  - https://youtu.be/naGF7EIUFp0
 
 - requirements.txt
+  
+  - https://youtu.be/naGF7EIUFp0
 
 - debugger
   
@@ -218,6 +222,7 @@
 - flask
   
   - [Live de Python #56 - Desenvolvimento web com Python e Flask - Bruno Rocha - YouTube](https://youtu.be/i63yIVgb-4Q)
+  - [API REST - Live de Python #175 - YouTube](https://youtu.be/1_nQ5A2HcgU)
 
 - django
   
